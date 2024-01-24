@@ -5,6 +5,7 @@ import Week2_3 from "./Pages/Week2_3";
 import Week2_4 from "./Pages/Week2_4";
 import Week2_5 from "./Pages/Week2_5";
 import Week2_6 from "./Pages/Week2_6";
+import Week2_7 from "./Pages/Week2_7";
 
 function App() {
   return (
@@ -19,7 +20,10 @@ function App() {
 
     // Event 실습
     // <Week2_5 />
-    <Week2_6/>
+    // <Week2_6 />
+    
+    // Styled Components 실습
+    <Week2_7/>
   );
 }
 
