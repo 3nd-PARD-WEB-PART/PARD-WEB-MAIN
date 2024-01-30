@@ -11,7 +11,7 @@ function UseMediaQuery() {
     return (
         <div>
             {isDesktopOrLaptop && (
-                <p>Yo are a destop or laptop</p>
+                <p>You are a destop or laptop</p>
             )}
             {isTabletOrMobile && (
                 <p>You are a tablet or mobile phone</p>
