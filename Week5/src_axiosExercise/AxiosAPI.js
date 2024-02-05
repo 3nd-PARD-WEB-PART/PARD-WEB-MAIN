@@ -18,21 +18,10 @@ export const getUserData = async () => {
     }
 }
 
-export const updateUserData = async (data, method = 'post') => {
+export const updateUserData = async (data) => {
     try {
-        let response;
-
-        // Depending on the method, send a POST or PUT request
-        if (method.toLowerCase() === 'post') {
-            response = await axios.post('http://localhost:3001/users', data);
-            // } else if (method.toLowerCase() === 'put') {     response = await
-            // axios.put('http://localhost:3001/users', data);
-        } else {
-            throw new Error('Invalid method. Use "post" or "put".');
-        }
-
-        // Log the successful update and return the response console.log('Data updated
-        // successfully:', response.data);
+        const response = await axios.post('http://localhost:3001/users', data);
+        // console.log('Data updated successfully:', response.data);
         return response;
     } catch (error) {
         // Log the error and throw it again for the caller to handle

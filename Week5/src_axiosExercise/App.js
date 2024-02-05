@@ -6,9 +6,6 @@ const App = () => {
     // 유저 정보를 저장하는 변수
     const [userData, setUserData] = useState([]);
 
-    // 추가하려는 유저 정보를 저장하는 변수
-    const [newUserData, setNewUserData] = useState(() => initialState);
-
     // 전체 데이터 불러오기
     useEffect(() => {
         const fetchData = async () => {
@@ -22,10 +19,12 @@ const App = () => {
         fetchData();
     }, []);
 
+    // 추가하려는 유저 정보를 저장하는 변수
+    const [newUserData, setNewUserData] = useState(() => initialState);
     // 데이터를 추가하는 핸들러
     const handlePostData = async () => {
         try {
-            const response = await updateUserData(newUserData, 'post');
+            const response = await updateUserData(newUserData);
             const updatedResponse = await getUserData();
             setUserData(updatedResponse.data);
             setNewUserData(initialState);
